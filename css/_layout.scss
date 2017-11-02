@@ -1,0 +1,277 @@
+.wrap{
+    max-width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    position: relative;
+}
+
+.header{
+    background-image: url('../img/Hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    h1{
+        letter-spacing: 2px;
+        margin: 100px 0;
+        font-size: 36px;
+    }
+    select{
+        font-size: 22px;
+        padding: 5px;
+        height: 50px;
+        width: 50%;
+        background-image: url('../img/icons_down.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        font-family: "Microsoft JhengHei", sans-serif;
+        border-radius: 5px;
+    }
+    select:hover{
+        box-shadow: 1px 1px 10px red;
+        cursor: pointer;
+    }
+    .popular{
+        max-width: 800px;
+        height: 120px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 4px gray;
+        background: #fff;
+        color: #000;
+        text-align: left;
+        font-size: 20px;
+        padding: 10px;
+        margin: 170px auto 0 auto;
+        position: relative;
+        z-index: 1000;
+        .col{
+            float: left;
+        }
+        p{
+            padding: 12px;
+        }
+        a{
+            display: block;
+            margin: 0 0 0 30px;
+        }
+        .lyz{
+            background: #8A82CC;
+            color: #fff;
+        }
+        .xmz{
+            background: #FFA782;
+            color: #fff;
+        }
+        .xxz{
+            background: #F5D005;
+            color: #fff;
+        }
+        .ycz{
+            background: #559AC8;
+            color: #fff;
+        }
+    }
+}
+@media(max-width: 768px){
+    .header{
+        .popular{
+            height: auto;
+            box-shadow: none;
+            background: none;
+            text-align: center;
+            margin: 170px -10px 0 -10px;
+            display: flex;
+            p{
+                display: none;
+            }
+            a{
+                margin: 0;
+            }
+            .col{
+                flex: 1;
+                padding: 10px;
+            }
+            .lyz, .xmz, .xxz, .ycz{
+                height: 50px;
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .header{
+        select{
+            width: 90%;
+        }
+        .popular{
+            display: none;
+        }
+    }
+}
+
+.container{
+    max-width: 900px;
+    min-height: calc(100vh - 600px);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    .block{
+        max-width: 900px;
+        height: 200px;
+        background-image: linear-gradient(to right, #559AC8 30%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 20px 2px;
+        background-repeat: repeat-x;
+    }
+    .caption{
+        font-size: 40px;
+        margin: 70px 0 30px 0;
+        color: rgb(149, 143, 204);
+    }
+    .content{
+        display: block;
+        height: auto;
+        > li{
+            width: 48%;
+            height: 330px;
+            margin: 20px 1%;
+            float: left;
+            box-shadow: 1px 1px 4px gray;
+            display: block;
+            position: relative;
+        }
+        > p{
+            margin: 20px;
+            font-size: 30px;
+        }
+        ul li{
+            margin: 15px 0 0 0;
+        }
+        .picture{
+            background-size: cover;
+            background-position: center;
+            width: auto;
+            height: 150px;
+            position: relative;
+            span{
+                display: block;
+                position: absolute;
+                color: #fff;
+            }
+        }
+        .name{
+            left: 20px;
+            bottom: 10px;
+            font-size: 30px;
+            text-align: left;
+            text-shadow: 0px 0px 10px black;
+        }
+        .district{
+            right: 20px;
+            top: 10px;
+            font-size: 16px;
+            text-shadow: 0px 0px 10px black;
+        }
+        .mention{
+            margin: 10px;
+            div{
+                text-align: left;
+                line-height: 2;
+            }
+        }
+        .clock{
+            .image{
+                float: left;
+                margin-right: 10px;
+            }
+            .text{
+                overflow: hidden;
+            }
+        }
+        .pin{
+            .image{
+                float: left;
+                margin: 0 11px 0 1px;
+            }
+            .text{
+                overflow: hidden;
+            }
+        }
+        .phone{
+            .image{
+                float: left;
+                margin: 0 13px 0 3px;
+            }
+            .text{
+                overflow: hidden;
+            }
+        }
+        .tag{
+            display: block;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            img{
+                margin-right: 5px;
+            }
+        }
+    }             
+}
+@media (max-width: 768px){
+    .container{
+        .block{
+            display: none;
+        }
+        .content{
+            > li{
+                width: 90%;
+                height: 450px;
+                margin: 20px 5%;
+            }
+            .picture{
+                height: 200px;
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .container{
+        .block{
+            display: none;
+        }
+        .caption{
+            margin: 30px 0;
+        }
+    }
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer{
+    background: #559AC8;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    p{
+        padding-top: 20px;
+    }
+    .source{
+        color: yellow;
+    }
+}
+
+.goTop{
+    display: block;
+    background-image: url('../img/btn_goTop.png');
+    height: 24px;
+    width: 24px;
+    position: fixed;
+    z-index: 10000;
+    right: 0;
+    bottom: 90px;
+}
